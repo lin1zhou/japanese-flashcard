@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>sakura-gramma</title>
+<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgPGRlZnM+CiAgICA8cmFkaWFsR3JhZGllbnQgaWQ9InAiIGN4PSI0MCUiIGN5PSIzMCUiIHI9IjYwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNmZmQwZGMiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSI2MCUiIHN0b3AtY29sb3I9IiNmMGEwYjgiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZTA4MDk4Ii8+CiAgICA8L3JhZGlhbEdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNCIgZmlsbD0iI2ZmZjVmOCIvPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDMyLDMxKSI+CiAgICA8ZWxsaXBzZSBjeD0iMCIgY3k9Ii05IiByeD0iNiIgcnk9IjExIiBmaWxsPSJ1cmwoI3ApIiB0cmFuc2Zvcm09InJvdGF0ZSgwKSIvPgogICAgPGVsbGlwc2UgY3g9IjAiIGN5PSItOSIgcng9IjYiIHJ5PSIxMSIgZmlsbD0idXJsKCNwKSIgdHJhbnNmb3JtPSJyb3RhdGUoNzIpIi8+CiAgICA8ZWxsaXBzZSBjeD0iMCIgY3k9Ii05IiByeD0iNiIgcnk9IjExIiBmaWxsPSJ1cmwoI3ApIiB0cmFuc2Zvcm09InJvdGF0ZSgxNDQpIi8+CiAgICA8ZWxsaXBzZSBjeD0iMCIgY3k9Ii05IiByeD0iNiIgcnk9IjExIiBmaWxsPSJ1cmwoI3ApIiB0cmFuc2Zvcm09InJvdGF0ZSgyMTYpIi8+CiAgICA8ZWxsaXBzZSBjeD0iMCIgY3k9Ii05IiByeD0iNiIgcnk9IjExIiBmaWxsPSJ1cmwoI3ApIiB0cmFuc2Zvcm09InJvdGF0ZSgyODgpIi8+CiAgICA8Y2lyY2xlIGN4PSIwIiBjeT0iMCIgcj0iMy41IiBmaWxsPSIjZjhkODYwIi8+CiAgPC9nPgo8L3N2Zz4=">
+<link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgPGRlZnM+CiAgICA8cmFkaWFsR3JhZGllbnQgaWQ9InAiIGN4PSI0MCUiIGN5PSIzMCUiIHI9IjYwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNmZmQwZGMiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSI2MCUiIHN0b3AtY29sb3I9IiNmMGEwYjgiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZTA4MDk4Ii8+CiAgICA8L3JhZGlhbEdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNCIgZmlsbD0iI2ZmZjVmOCIvPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDMyLDMxKSI+CiAgICA8ZWxsaXBzZSBjeD0iMCIgY3k9Ii05IiByeD0iNiIgcnk9IjExIiBmaWxsPSJ1cmwoI3ApIiB0cmFuc2Zvcm09InJvdGF0ZSgwKSIvPgogICAgPGVsbGlwc2UgY3g9IjAiIGN5PSItOSIgcng9IjYiIHJ5PSIxMSIgZmlsbD0idXJsKCNwKSIgdHJhbnNmb3JtPSJyb3RhdGUoNzIpIi8+CiAgICA8ZWxsaXBzZSBjeD0iMCIgY3k9Ii05IiByeD0iNiIgcnk9IjExIiBmaWxsPSJ1cmwoI3ApIiB0cmFuc2Zvcm09InJvdGF0ZSgxNDQpIi8+CiAgICA8ZWxsaXBzZSBjeD0iMCIgY3k9Ii05IiByeD0iNiIgcnk9IjExIiBmaWxsPSJ1cmwoI3ApIiB0cmFuc2Zvcm09InJvdGF0ZSgyMTYpIi8+CiAgICA8ZWxsaXBzZSBjeD0iMCIgY3k9Ii05IiByeD0iNiIgcnk9IjExIiBmaWxsPSJ1cmwoI3ApIiB0cmFuc2Zvcm09InJvdGF0ZSgyODgpIi8+CiAgICA8Y2lyY2xlIGN4PSIwIiBjeT0iMCIgcj0iMy41IiBmaWxsPSIjZjhkODYwIi8+CiAgPC9nPgo8L3N2Zz4=">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="sakura-gramma">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#fce4ec">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', 'Hiragino Sans', 'Meiryo', 'Microsoft YaHei', sans-serif;
+  background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 30%, #e8eaf6 60%, #fce4ec 100%);
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3d3058;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* ---------- 主容器：响应式 ---------- */
+.app-container {
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  max-width: 420px;
+  max-height: 750px;
+  background: #ffffff;
+  border-radius: 0;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  border: none;
+}
+
+/* 中等屏幕及以上：卡片浮窗效果 */
+@media (min-width: 440px) {
+  body {
+    padding: 16px;
+  }
+  .app-container {
+    width: 380px;
+    height: 550px;
+    border-radius: 20px;
+    box-shadow:
+      0 4px 24px rgba(180, 140, 170, 0.18),
+      0 1px 4px rgba(180, 140, 170, 0.10);
+    border: 1px solid rgba(220, 190, 210, 0.4);
+  }
+}
+
+/* 平板横屏 */
+@media (min-width: 768px) and (min-height: 600px) {
+  .app-container {
+    width: 400px;
+    height: 580px;
+  }
+}
+
+/* ---------- 顶部标题栏 ---------- */
+.header {
+  background: linear-gradient(135deg, #fce4ec, #f8d8e8);
+  padding: 14px 20px;
+  text-align: center;
+  border-bottom: 1px solid rgba(220, 180, 200, 0.35);
+  flex-shrink: 0;
+}
+
+.header .title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #b85070;
+  letter-spacing: 0.03em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.header .title .sakura-icon {
+  font-size: 1.3rem;
+}
+
+/* ---------- 控制栏 ---------- */
+.controls {
+  display: flex;
+  gap: 10px;
+  padding: 12px 20px;
+  background: #fef9fb;
+  border-bottom: 1px solid rgba(220, 190, 210, 0.25);
+  flex-shrink: 0;
+}
+
+.control-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+}
+
+.control-group label {
+  font-size: 0.78rem;
+  color: #9888a8;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.control-group select {
+  flex: 1;
+  padding: 7px 10px;
+  border: 1.5px solid rgba(210, 180, 210, 0.5);
+  border-radius: 10px;
+  background: #fff;
+  color: #3d3058;
+  font-size: 0.82rem;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s;
+  font-family: inherit;
+}
+
+.control-group select:focus {
+  border-color: #e0a0b8;
+  box-shadow: 0 0 0 2px rgba(230, 160, 180, 0.15);
+}
+
+/* ---------- 进度条 ---------- */
+.progress-area {
+  padding: 10px 20px;
+  flex-shrink: 0;
+}
+
+.progress-text {
+  font-size: 0.75rem;
+  color: #9888a8;
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.progress-bar-track {
+  width: 100%;
+  height: 5px;
+  background: #f0e0e8;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #e8a0b8, #d0b0e0);
+  border-radius: 3px;
+  transition: width 0.35s ease;
+}
+
+/* ---------- 卡片区域 ---------- */
+.card-stage {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 12px 20px;
+  min-height: 0;
+}
+
+/* 卡片3D翻转容器 */
+.card-scene {
+  width: 100%;
+  max-width: 340px;
+  perspective: 900px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  min-height: 240px;
+  transform-style: preserve-3d;
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+/* 翻转状态 */
+.card-inner.flipped {
+  transform: rotateY(180deg);
+  cursor: default;
+}
+
+/* --- 正面 --- */
+.card-front,
+.card-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 16px;
+  border: 1px solid rgba(210, 190, 220, 0.35);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(160, 130, 160, 0.08);
+  padding: 24px 20px;
+}
+
+.card-front {
+  gap: 12px;
+}
+
+.card-front .grammar-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #3d3058;
+  text-align: center;
+  line-height: 1.6;
+  word-break: keep-all;
+}
+
+.card-front .hint {
+  font-size: 0.75rem;
+  color: #c0a8b8;
+  letter-spacing: 0.05em;
+}
+
+.card-front .level-badge {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 8px;
+  letter-spacing: 0.05em;
+}
+
+.level-badge.n2 {
+  background: rgba(160, 140, 210, 0.18);
+  color: #6858a0;
+}
+
+.level-badge.n3 {
+  background: rgba(210, 140, 160, 0.18);
+  color: #a05870;
+}
+
+/* --- 背面 --- */
+.card-back {
+  transform: rotateY(180deg);
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 14px;
+  overflow-y: auto;
+  cursor: default;
+  padding: 22px 18px;
+}
+
+/* 背面滚动条美化 */
+.card-back::-webkit-scrollbar {
+  width: 4px;
+}
+.card-back::-webkit-scrollbar-track {
+  background: transparent;
+}
+.card-back::-webkit-scrollbar-thumb {
+  background: rgba(200, 170, 190, 0.4);
+  border-radius: 2px;
+}
+
+.card-back .back-section {
+  text-align: left;
+}
+
+.card-back .back-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #b85070;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+}
+
+.card-back .back-content {
+  font-size: 0.92rem;
+  color: #3d3058;
+  line-height: 1.7;
+}
+
+.card-back .back-divider {
+  height: 1px;
+  background: rgba(220, 190, 210, 0.35);
+  margin: 2px 0;
+}
+
+/* 背面等级标签 */
+.card-back .level-badge-back {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+/* ---------- 按钮区 ---------- */
+.btn-area {
+  padding: 14px 20px 18px;
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+  opacity: 0.3;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.btn-area.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.btn {
+  flex: 1;
+  padding: 12px 0;
+  border: none;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  transition: transform 0.15s, box-shadow 0.15s, background 0.2s;
+  font-family: inherit;
+  color: #fff;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-remember {
+  background: linear-gradient(135deg, #7ecb8a, #5db870);
+  box-shadow: 0 2px 8px rgba(100, 180, 120, 0.3);
+}
+
+.btn-remember:hover {
+  background: linear-gradient(135deg, #8dd899, #6cc47d);
+  box-shadow: 0 4px 14px rgba(100, 180, 120, 0.4);
+}
+
+.btn-forgotten {
+  background: linear-gradient(135deg, #f0b088, #e89868);
+  box-shadow: 0 2px 8px rgba(220, 140, 100, 0.3);
+}
+
+.btn-forgotten:hover {
+  background: linear-gradient(135deg, #f4c098, #eea878);
+  box-shadow: 0 4px 14px rgba(220, 140, 100, 0.4);
+}
+
+/* ---------- 完成画面 ---------- */
+.finished-screen {
+  display: none;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.finished-screen.show {
+  display: flex;
+}
+
+.finished-screen .finish-icon {
+  font-size: 2.8rem;
+}
+
+.finished-screen .finish-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #3d3058;
+}
+
+.finished-screen .finish-stats {
+  font-size: 0.88rem;
+  color: #6d6088;
+  line-height: 1.8;
+}
+
+.finished-screen .finish-stats span {
+  font-weight: 700;
+}
+
+.finished-screen .finish-stats .remembered-count {
+  color: #5db870;
+}
+
+.finished-screen .finish-stats .forgotten-count {
+  color: #e89868;
+}
+
+.btn-restart {
+  margin-top: 8px;
+  padding: 12px 36px;
+  border: none;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #e8a0b8, #c898d0);
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  box-shadow: 0 3px 12px rgba(190, 140, 180, 0.35);
+  transition: transform 0.15s, box-shadow 0.15s;
+  font-family: inherit;
+}
+
+.btn-restart:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 18px rgba(190, 140, 180, 0.45);
+}
+
+.btn-restart:active {
+  transform: scale(0.97);
+}
+
+/* ---------- 空状态 ---------- */
+.empty-state {
+  display: none;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #9888a8;
+  font-size: 0.88rem;
+  padding: 30px;
+  line-height: 1.8;
+}
+
+.empty-state.show {
+  display: flex;
+}
+
+/* ---------- 移动端微调 ---------- */
+@media (max-width: 439px) {
+  .header {
+    padding: 12px 16px;
+    padding-top: max(12px, env(safe-area-inset-top));
+  }
+
+  .header .title {
+    font-size: 1rem;
+  }
+
+  .controls {
+    padding: 10px 14px;
+    gap: 8px;
+  }
+
+  .control-group select {
+    padding: 8px 8px;
+    font-size: 0.88rem; /* 防止 iOS 缩放 */
+  }
+
+  .progress-area {
+    padding: 8px 16px;
+  }
+
+  .card-stage {
+    padding: 8px 14px;
+  }
+
+  .card-front,
+  .card-back {
+    padding: 20px 16px;
+    border-radius: 14px;
+  }
+
+  .card-front .grammar-text {
+    font-size: 1.3rem;
+  }
+
+  .card-back .back-content {
+    font-size: 0.88rem;
+  }
+
+  .btn-area {
+    padding: 12px 14px 16px;
+    padding-bottom: max(16px, env(safe-area-inset-bottom));
+    gap: 10px;
+  }
+
+  .btn {
+    padding: 14px 0;
+    font-size: 0.9rem;
+  }
+}
+
+/* 小屏手机 (< 360px) */
+@media (max-width: 359px) {
+  .card-front .grammar-text {
+    font-size: 1.15rem;
+  }
+
+  .card-back .back-content {
+    font-size: 0.82rem;
+  }
+
+  .btn {
+    padding: 12px 0;
+    font-size: 0.85rem;
+  }
+
+  .header .title {
+    font-size: 0.9rem;
+  }
+}
+
+/* 横屏手机：限制最大高度 */
+@media (max-height: 440px) and (orientation: landscape) {
+  .app-container {
+    max-height: 100vh;
+    max-height: 100dvh;
+  }
+
+  .header {
+    padding: 6px 16px;
+  }
+
+  .controls {
+    padding: 6px 14px;
+  }
+
+  .progress-area {
+    padding: 4px 16px;
+  }
+
+  .card-inner {
+    min-height: 160px;
+  }
+
+  .card-front .grammar-text {
+    font-size: 1.1rem;
+  }
+
+  .btn-area {
+    padding: 8px 14px 10px;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="app-container">
+
+  <!-- ===== ① 标题栏 ===== -->
+  <div class="header">
+    <div class="title">
+      <span class="sakura-icon">&#x1F338;</span>
+      sakura-gramma
+    </div>
+  </div>
+
+  <!-- ===== ② 控制栏 ===== -->
+  <div class="controls">
+    <div class="control-group">
+      <label for="levelSelect">等级</label>
+      <select id="levelSelect">
+        <option value="N2">N2</option>
+        <option value="N3">N3</option>
+      </select>
+    </div>
+    <div class="control-group">
+      <label for="countSelect">每次</label>
+      <select id="countSelect">
+        <option value="3">3 条</option>
+        <option value="5" selected>5 条</option>
+        <option value="8">8 条</option>
+        <option value="10">10 条</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- ===== ③ 进度条 ===== -->
+  <div class="progress-area" id="progressArea">
+    <div class="progress-text" id="progressText">第 1 / 5 张</div>
+    <div class="progress-bar-track">
+      <div class="progress-bar-fill" id="progressBar" style="width: 0%;"></div>
+    </div>
+  </div>
+
+  <!-- ===== ④ 卡片区 ===== -->
+  <div class="card-stage" id="cardStage">
+    <div class="card-scene" id="cardScene">
+      <div class="card-inner" id="cardInner">
+
+        <!-- 正面 -->
+        <div class="card-front" id="cardFront">
+          <span class="level-badge n2" id="levelBadge">N2</span>
+          <div class="grammar-text" id="grammarText"></div>
+          <div class="hint">点击显示答案</div>
+        </div>
+
+        <!-- 背面 -->
+        <div class="card-back" id="cardBack">
+          <span class="level-badge-back n2" id="levelBadgeBack">N2</span>
+          <div class="back-section">
+            <div class="back-label">意思</div>
+            <div class="back-content" id="meaningText"></div>
+          </div>
+          <div class="back-divider"></div>
+          <div class="back-section">
+            <div class="back-label">例句</div>
+            <div class="back-content" id="exampleJp"></div>
+          </div>
+          <div class="back-divider"></div>
+          <div class="back-section">
+            <div class="back-label">翻译</div>
+            <div class="back-content" id="exampleCn"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== ⑤ 按钮区 ===== -->
+  <div class="btn-area" id="btnArea">
+    <button class="btn btn-remember" id="btnRemember">&#x2713; 记住</button>
+    <button class="btn btn-forgotten" id="btnForgotten">&#x2605; 不熟</button>
+  </div>
+
+  <!-- ===== 完成画面 ===== -->
+  <div class="finished-screen" id="finishedScreen">
+    <div class="finish-icon">&#x1F338;</div>
+    <div class="finish-title">本轮完成！</div>
+    <div class="finish-stats" id="finishStats"></div>
+    <button class="btn-restart" id="btnRestart">再来一组</button>
+  </div>
+
+  <!-- ===== 空状态 ===== -->
+  <div class="empty-state" id="emptyState">
+    该等级暂无数据。<br>请切换等级或加载题库。
+  </div>
+
+</div>
+
+<script>
+// ============================================================
+// SAKURA-GRAMMA — JavaScript
+// ============================================================
+
+// ---------- 内嵌语法数据（构建时注入） ----------
+var GRAMMAR_DATA = [{"id":"n2_001_tenaranai","l":"N2","g":"～てならない/～てたまらない/～てしかたがない/～てしょうがない","m":"非常……；……得不得了","ej":"試験の結果が気になってならない。","ec":"我非常在意考试结果。"},{"id":"n2_002_tehairarenai","l":"N2","g":"～てはいられない","m":"不能继续……；不能坐视不管","ej":"締め切りが近いので、のんびりしてはいられない。","ec":"截止日期快到了，不能再悠闲下去了。"},{"id":"n2_003_tebakariiru","l":"N2","g":"～てばかりいる","m":"总是……；光是……","ej":"弟は休みの日にゲームをしてばかりいる。","ec":"弟弟休息日总是打游戏。"},{"id":"n2_004_bakarida","l":"N2","g":"～ばかりだ","m":"越来越……；一味地……","ej":"物価は上がるばかりだ。","ec":"物价只是在不断上涨。"},{"id":"n2_005_zunihairarenai","l":"N2","g":"～ずにはいられない","m":"忍不住不……；不得不……","ej":"その話を聞いて、笑わずにはいられなかった。","ec":"听了那件事，我忍不住笑了。"},{"id":"n2_006_itsupouda","l":"N2","g":"～一方だ/～一方で","m":"一方面……；另一方面……；越来越……","ej":"この町は便利になる一方で、自然が少なくなっている。","ec":"这个城市一方面变得方便，另一方面自然环境在减少。"},{"id":"n2_007_tsumorida","l":"N2","g":"～つもりだ","m":"打算……；自以为……","ej":"来年、日本へ留学するつもりだ。","ec":"我打算明年去日本留学。"},{"id":"n2_008_youtosuru","l":"N2","g":"～ようとする/～ようと思う","m":"正要……；试图……","ej":"家を出ようとしたとき、電話が鳴った。","ec":"正要出门时，电话响了。"},{"id":"n2_009_nagara_1","l":"N2","g":"～ながら","m":"一边……一边……","ej":"音楽を聞きながら宿題をした。","ec":"我一边听音乐一边做作业。"},{"id":"n2_010_tsutsu","l":"N2","g":"～つつ","m":"一边……一边……；虽然……但是……","ej":"資料を確認しつつ、発表の準備を進めた。","ec":"我一边确认资料，一边推进发表准备。"},{"id":"n2_011_tsutsuaru","l":"N2","g":"～つつある","m":"正在逐渐……","ej":"新しい制度が社会に広まりつつある。","ec":"新制度正在社会中逐渐普及。"},{"id":"n2_012_ba_hodo","l":"N2","g":"～ば～ほど","m":"越……越……","ej":"考えれば考えるほど、問題は難しく感じられる。","ec":"越想越觉得问题困难。"},{"id":"n2_013_nakawo","l":"N2","g":"～中を","m":"在……之中；冒着……","ej":"激しい雨の中を、彼は駅まで走った。","ec":"他冒着大雨跑到了车站。"},{"id":"n2_014_kiri","l":"N2","g":"～きり","m":"自从……以后就再没……；仅仅……","ej":"彼とは卒業式で会ったきり、連絡を取っていない。","ec":"自毕业典礼见过他以后，就没有再联系。"},{"id":"n2_015_kanoyouni","l":"N2","g":"～かのように/～かのようだ","m":"好像……一样","ej":"彼女は何も知らないかのように話していた。","ec":"她像什么都不知道一样说着话。"},{"id":"n2_016_furiwosuru","l":"N2","g":"～ふりをする","m":"装作……的样子","ej":"彼は聞こえないふりをした。","ec":"他装作没听见。"},{"id":"n2_017_tokorodatsuta","l":"N2","g":"～ところだった","m":"差点儿就……","ej":"もう少しで電車に乗り遅れるところだった。","ec":"差一点就错过电车了。"},{"id":"n2_018_kotoninatsuteiru","l":"N2","g":"～ことになっている/～こととなっている/～ことになる","m":"规定为……；决定为……","ej":"この建物では、夜十時以降は静かにすることになっている。","ec":"这栋楼规定晚上十点以后要保持安静。"},{"id":"n2_019_kotonisuru","l":"N2","g":"～ことにする/～こととする","m":"决定……","ej":"健康のために、毎朝走ることにした。","ec":"为了健康，我决定每天早上跑步。"},{"id":"n2_020_younisuru","l":"N2","g":"～ようにする","m":"尽量做到……","ej":"忘れ物をしないようにしている。","ec":"我尽量不忘带东西。"},{"id":"n2_021_youninaru","l":"N2","g":"～ようになる","m":"变得会……；逐渐……","ej":"毎日練習して、日本語のニュースが聞き取れるようになった。","ec":"每天练习后，我变得能听懂日语新闻了。"},{"id":"n2_022_nikagirideha","l":"N2","g":"～に限りでは","m":"就……范围来说","ej":"私が知っている限りでは、彼はまだ帰国していない。","ec":"据我所知，他还没有回国。"},{"id":"n2_023_nikagitsute","l":"N2","g":"～に限って","m":"偏偏在……；唯独……","ej":"急いでいる日に限って、電車が遅れる。","ec":"偏偏在赶时间的日子，电车会晚点。"},{"id":"n2_024_nikagiri","l":"N2","g":"～に限り","m":"仅限于……；只要……就……","ej":"本日に限り、入場料は無料です。","ec":"仅限今天，入场免费。"},{"id":"n2_025_nikagiru","l":"N2","g":"～に限る","m":"最好是……；限于……","ej":"疲れたときは、早く寝るに限る。","ec":"累的时候最好早点睡。"},{"id":"n2_026_nikagirazu","l":"N2","g":"～に限らず","m":"不限于……","ej":"このサービスは学生に限らず、誰でも利用できる。","ec":"这项服务不限于学生，任何人都可以使用。"},{"id":"n2_027_tohakagiranai","l":"N2","g":"～とは限らない","m":"未必……；不一定……","ej":"高い商品が必ずしもいいとは限らない。","ec":"贵的商品未必一定好。"},{"id":"n2_028_todomaranai","l":"N2","g":"～とどまらない","m":"不限于……；不止于……","ej":"影響は国内にとどまらない。","ec":"影响不限于国内。"},{"id":"n2_029_nominarazu","l":"N2","g":"～のみならず","m":"不仅……而且……","ej":"彼は日本語のみならず、中国語も話せる。","ec":"他不仅会日语，还会中文。"},{"id":"n2_030_bakaridenaku","l":"N2","g":"～ばかりでなく","m":"不仅……而且……","ej":"この店は料理が安いばかりでなく、味もいい。","ec":"这家店不仅菜便宜，味道也好。"},{"id":"n2_031_bakarika","l":"N2","g":"～ばかりか","m":"不但……甚至……","ej":"彼は謝るばかりか、逆に文句を言い始めた。","ec":"他不但不道歉，反而开始抱怨。"},{"id":"n2_032_dokoroka","l":"N2","g":"～どころか","m":"别说……，连……；非但不……反而……","ej":"休むどころか、今日は残業までした。","ec":"别说休息了，今天还加班了。"},{"id":"n2_033_dokorodehanai","l":"N2","g":"～どころではない","m":"不是……的时候；谈不上……","ej":"明日は試験なので、遊んでいるどころではない。","ec":"明天考试，现在不是玩的时候。"},{"id":"n2_034_uchini_1","l":"N2","g":"～うちに","m":"趁着……期间","ej":"若いうちに、いろいろな経験をしておきたい。","ec":"趁年轻，我想积累各种经验。"},{"id":"n2_035_sae","l":"N2","g":"～さえ/～でさえ","m":"连……都……","ej":"彼は自分の名前さえ書けなかった。","ec":"他连自己的名字都写不出来。"},{"id":"n2_036_kotoka","l":"N2","g":"～ことか","m":"多么……啊","ej":"合格の知らせを聞いて、どれほど嬉しかったことか。","ec":"听到合格的消息，我不知道有多高兴。"},{"id":"n2_037_hamochiron","l":"N2","g":"～はもちろん/～はもとより/～はもちろんのこと","m":"……自不必说；不仅……","ej":"この大学は研究はもちろん、教育にも力を入れている。","ec":"这所大学研究自不必说，也重视教育。"},{"id":"n2_038_hashinai","l":"N2","g":"～はしない","m":"绝不……；不会……","ej":"彼はそんな無責任なことはしない。","ec":"他不会做那种不负责任的事。"},{"id":"n2_039_tsukonai","l":"N2","g":"～っこない","m":"绝不可能……","ej":"こんな難しい問題、私に解けっこない。","ec":"这么难的问题，我不可能解得出来。"},{"id":"n2_040_karashite","l":"N2","g":"～からして","m":"从……来看就……","ej":"彼は話し方からして自信がなさそうだ。","ec":"从他说话方式来看，就好像没有自信。"},{"id":"n2_041_koso","l":"N2","g":"～こそ","m":"正是……才……","ej":"努力したからこそ、成功できたのだ。","ec":"正因为努力了，才获得成功。"},{"id":"n2_042_karakoso","l":"N2","g":"～からこそ/～ばこそ","m":"正因为……才……","ej":"失敗したからこそ、多くのことを学べた。","ec":"正因为失败了，才学到了很多东西。"},{"id":"n2_043_hazuda","l":"N2","g":"～はずだ","m":"应该……；理应……","ej":"彼はもう駅に着いているはずだ。","ec":"他应该已经到车站了。"},{"id":"n2_044_hazuganai","l":"N2","g":"～はずがない","m":"不可能……","ej":"毎日練習している彼が負けるはずがない。","ec":"每天都练习的他不可能输。"},{"id":"n2_045_wakeda","l":"N2","g":"～わけだ","m":"怪不得……；也就是说……","ej":"彼は十年日本に住んでいた。日本語が上手なわけだ。","ec":"他在日本住了十年，怪不得日语好。"},{"id":"n2_046_wakeganai","l":"N2","g":"～わけがない","m":"不可能……","ej":"こんな簡単な問題が分からないわけがない。","ec":"这么简单的问题不可能不懂。"},{"id":"n2_047_wakedehanai","l":"N2","g":"～わけではない/～わけでもない/～というわけではない","m":"并不是……","ej":"彼の意見に反対しているわけではない。","ec":"我并不是反对他的意见。"},{"id":"n2_048_wakenihaikanai","l":"N2","g":"～わけにはいかない/～ないわけにはいかない","m":"不能……；不得不……","ej":"明日は大事な会議があるので、休むわけにはいかない。","ec":"明天有重要会议，不能休息。"},{"id":"n2_049_monoda","l":"N2","g":"～ものだ","m":"通常……；真想……；过去常常……","ej":"子どものころ、よくこの川で遊んだものだ。","ec":"小时候，我经常在这条河边玩。"},{"id":"n2_050_monodehanai","l":"N2","g":"～ものではない/～もんじゃない","m":"不应该……","ej":"人の失敗を笑うものではない。","ec":"不应该嘲笑别人的失败。"},{"id":"n2_051_toiumonoda","l":"N2","g":"～というものだ","m":"这才是……；可谓是……","ej":"努力が報われたのだから、これこそ成功というものだ。","ec":"努力得到了回报，这才称得上成功。"},{"id":"n2_052_toiumonodehanai","l":"N2","g":"～というものではない","m":"并不是所谓的……；不能说是……","ej":"お金があれば幸せというものではない。","ec":"并不是有钱就幸福。"},{"id":"n2_053_monoka","l":"N2","g":"～ものか","m":"怎么会……呢；绝不……","ej":"あんな人に二度と頼むものか。","ec":"我绝不会再拜托那种人。"},{"id":"n2_054_monogaaru","l":"N2","g":"～ものがある","m":"有某种……之处；令人……","ej":"彼の演奏には人を感動させるものがある。","ec":"他的演奏有令人感动的地方。"},{"id":"n2_055_bekida","l":"N2","g":"～べきだ","m":"应该……","ej":"約束は守るべきだ。","ec":"应该遵守约定。"},{"id":"n2_056_kotoda","l":"N2","g":"～ことだ","m":"最好……；应该……","ej":"健康になりたいなら、毎日運動することだ。","ec":"如果想健康，最好每天运动。"},{"id":"n2_057_kotoni","l":"N2","g":"～ことに","m":"令人……的是","ej":"不思議なことに、彼はその事実を知っていた。","ec":"令人不可思议的是，他知道那个事实。"},{"id":"n2_058_kotohanai","l":"N2","g":"～ことはない","m":"没必要……；不会……","ej":"少し失敗しただけだから、気にすることはない。","ec":"只是稍微失败了一下，没必要在意。"},{"id":"n2_059_hodo_nai","l":"N2","g":"～ほど～ない","m":"没有比……更……；不如……","ej":"家族ほど大切なものはない。","ec":"没有比家人更重要的东西。"},{"id":"n2_060_tomieru","l":"N2","g":"～と見える","m":"看来……；看样子……","ej":"彼は疲れていると見える。","ec":"他看起来很累。"},{"id":"n2_061_nisuginai","l":"N2","g":"～にすぎない","m":"只不过是……","ej":"これは一つの例にすぎない。","ec":"这只不过是一个例子。"},{"id":"n2_062_nihokanaranai","l":"N2","g":"～にほかならない/～よりほかはない","m":"正是……；只能……","ej":"今回の成功は皆の努力にほかならない。","ec":"这次成功正是大家努力的结果。"},{"id":"n2_063_denakutenandarou","l":"N2","g":"～でなくてなんだろう","m":"不是……又是什么呢","ej":"これが奇跡でなくてなんだろう。","ec":"这不是奇迹又是什么呢？"},{"id":"n2_064_nisouinai","l":"N2","g":"～に相違ない","m":"一定……；无疑……","ej":"この筆跡は彼のものに相違ない。","ec":"这个笔迹一定是他的。"},{"id":"n2_065_nikimatsuteiru","l":"N2","g":"～に決まっている","m":"一定……；肯定……","ej":"こんなに寒いのだから、山では雪が降っているに決まっている。","ec":"这么冷，山里肯定在下雪。"},{"id":"n2_066_nichigainai","l":"N2","g":"～に違いない","m":"一定……；无疑……","ej":"彼はこの知らせを聞いて驚くに違いない。","ec":"他听到这个消息一定会吃惊。"},{"id":"n2_067_nodehanai_darou_ka","l":"N2","g":"～のではない（だろう）か","m":"是不是……呢；恐怕是……吧","ej":"この方法には問題があるのではないだろうか。","ec":"这种方法是不是存在问题呢？"},{"id":"n2_068_tokoroda","l":"N2","g":"～ところだ","m":"正要……；正在……；刚刚……","ej":"今から出かけるところだ。","ec":"我正要出门。"},{"id":"n2_069_tokoroni","l":"N2","g":"～ところに/～ところへ/～ところを","m":"正在……的时候","ej":"ちょうど食事をしているところに、友達が来た。","ec":"正在吃饭的时候，朋友来了。"},{"id":"n2_070_saichuu","l":"N2","g":"～最中","m":"正在……的时候","ej":"会議の最中に電話が鳴った。","ec":"会议正在进行时，电话响了。"},{"id":"n2_071_tabini","l":"N2","g":"～たびに","m":"每当……就……","ej":"この歌を聞くたびに、故郷を思い出す。","ec":"每次听到这首歌，就会想起故乡。"},{"id":"n2_072_tsuideni","l":"N2","g":"～ついでに","m":"顺便……","ej":"買い物のついでに、郵便局へ寄った。","ec":"购物时顺便去了邮局。"},{"id":"n2_073_uchini_2","l":"N2","g":"～うちに","m":"在……过程中，不知不觉……","ej":"話しているうちに、気持ちが楽になった。","ec":"说着说着，心情变轻松了。"},{"id":"n2_074_ka_naikanouchini","l":"N2","g":"～か～ないかのうちに","m":"刚一……就……","ej":"ベルが鳴るか鳴らないかのうちに、学生たちは教室を出た。","ec":"铃声刚响，学生们就出了教室。"},{"id":"n2_075_takatoomouto","l":"N2","g":"～たかと思うと/～たかと思ったら","m":"刚……就……","ej":"雨がやんだかと思うと、また降り出した。","ec":"刚以为雨停了，又开始下了。"},{"id":"n2_076_tatotan_ni","l":"N2","g":"～たとたん（に）","m":"刚一……就……","ej":"窓を開けたとたんに、強い風が入ってきた。","ec":"刚打开窗，强风就吹了进来。"},{"id":"n2_077_uede_1","l":"N2","g":"～うえで","m":"在……之后","ej":"詳しく調べたうえで、結論を出したい。","ec":"我想详细调查之后再下结论。"},{"id":"n2_078_shidai","l":"N2","g":"～次第","m":"一……就……","ej":"準備ができ次第、出発します。","ec":"准备好后马上出发。"},{"id":"n2_079_teirai","l":"N2","g":"～て以来","m":"自从……以来","ej":"日本に来て以来、毎日日本語を使っている。","ec":"自从来到日本以来，我每天都使用日语。"},{"id":"n2_080_tehajimete","l":"N2","g":"～てはじめて","m":"只有……之后才……","ej":"病気になってはじめて、健康の大切さに気づいた。","ec":"生病之后才意识到健康的重要。"},{"id":"n2_081_niatatsute","l":"N2","g":"～にあたって/～にあたり","m":"在……之际","ej":"新しい仕事を始めるにあたって、目標を決めた。","ec":"在开始新工作之际，我定下了目标。"},{"id":"n2_082_nisaishite","l":"N2","g":"～に際して","m":"在……之际","ej":"入国に際して、必要な書類を提出してください。","ec":"入境时请提交必要材料。"},{"id":"n2_083_wokitsukakenishite","l":"N2","g":"～をきっかけにして/～がきっかけで/～を契機として/～を機に","m":"以……为契机","ej":"留学をきっかけにして、日本文化に興味を持つようになった。","ec":"以留学为契机，我开始对日本文化感兴趣。"},{"id":"n2_084_toitsutemo","l":"N2","g":"～といっても","m":"虽说……但是……","ej":"新車といっても、中古に近い状態だ。","ec":"虽说是新车，但状态接近二手。"},{"id":"n2_085_karatoitsute","l":"N2","g":"～からといって","m":"虽说……也不能……","ej":"安いからといって、必要のないものを買うべきではない。","ec":"虽说便宜，也不应该买不需要的东西。"},{"id":"n2_086_nagara_2","l":"N2","g":"～ながら","m":"虽然……但是……","ej":"彼は若いながら、経験が豊富だ。","ec":"他虽然年轻，但经验丰富。"},{"id":"n2_087_tsutsu_mo","l":"N2","g":"～つつ（も）","m":"虽然……但是……","ej":"悪いと知りつつも、彼に本当のことを言えなかった。","ec":"虽然知道不好，但没能告诉他真相。"},{"id":"n2_088_monono","l":"N2","g":"～ものの","m":"虽然……但是……","ej":"申し込んだものの、まだ返事が来ない。","ec":"虽然申请了，但还没有收到回复。"},{"id":"n2_089_nimokakawarazu","l":"N2","g":"～にもかかわらず","m":"尽管……却……","ej":"雨にもかかわらず、多くの人が集まった。","ec":"尽管下雨，还是来了很多人。"},{"id":"n2_090_tatokoroga","l":"N2","g":"～たところが/～ところが","m":"……结果却……","ej":"店へ行ったところが、もう閉まっていた。","ec":"去了店里，结果已经关门了。"},{"id":"n2_091_kuseni","l":"N2","g":"～くせに","m":"明明……却……","ej":"彼は何も知らないくせに、偉そうに話している。","ec":"他明明什么都不知道，却摆出一副了不起的样子。"},{"id":"n2_092_warini","l":"N2","g":"～わりに","m":"虽然……但是出乎意料地……","ej":"この料理は安いわりにおいしい。","ec":"这道菜虽然便宜，却很好吃。"},{"id":"n2_093_nishiteha","l":"N2","g":"～にしては","m":"作为……来说……","ej":"彼は新人にしては仕事が速い。","ec":"作为新人来说，他工作很快。"},{"id":"n2_094_hanmen","l":"N2","g":"～反面","m":"另一方面；反面","ej":"この仕事は収入が高い反面、責任も重い。","ec":"这份工作收入高，但另一方面责任也重。"},{"id":"n2_095_yara_yara","l":"N2","g":"～やら～やら","m":"又是……又是……","ej":"引っ越しの準備で、掃除やら手続きやら忙しい。","ec":"因为搬家准备，又是打扫又是办手续，很忙。"},{"id":"n2_096_mo_ba_mo","l":"N2","g":"～も～ば～も","m":"既……又……","ej":"彼女は歌も上手なら、ピアノも得意だ。","ec":"她既擅长唱歌，也擅长钢琴。"},{"id":"n2_097_nitsuke_nitsuke","l":"N2","g":"～につけ～につけ","m":"无论……还是……都……","ej":"嬉しいにつけ悲しいにつけ、私は母に電話をする。","ec":"无论开心还是难过，我都会给母亲打电话。"},{"id":"n2_098_nishitemo_nishitemo","l":"N2","g":"～にしても～にしても/～にしろ～にしろ/～にせよ～にせよ","m":"无论……还是……","ej":"行くにしても行かないにしても、早く返事をしてください。","ec":"无论去还是不去，请早点回复。"},{"id":"n2_099_toiuto","l":"N2","g":"～というと/～といえば/～といったら","m":"说到……；提起……","ej":"日本の春といえば、桜を思い出す。","ec":"说到日本的春天，就会想到樱花。"},{"id":"n2_100_katoiuto","l":"N2","g":"～かというと/～かといえば/～かといったら","m":"要说是否……；并不是……","ej":"彼が嫌いかというと、そうではない。","ec":"要说是否讨厌他，并不是那样。"},{"id":"n2_101_karaiuto","l":"N2","g":"～からいうと/～からいえば/～からいって","m":"从……来说","ej":"品質からいうと、この商品はかなり優れている。","ec":"从品质来说，这个商品相当优秀。"},{"id":"n2_102_karasuruto","l":"N2","g":"～からすると/～からすれば","m":"从……立场来看","ej":"専門家からすると、この結果は予想どおりだった。","ec":"从专家来看，这个结果在预料之中。"},{"id":"n2_103_karamiruto","l":"N2","g":"～から見ると/～から見れば/～から見て","m":"从……来看","ej":"データから見れば、状況は改善している。","ec":"从数据来看，情况正在改善。"},{"id":"n2_104_nishitemireba","l":"N2","g":"～にしてみれば","m":"对于……来说","ej":"親にしてみれば、子どもの安全が一番大切だ。","ec":"对父母来说，孩子的安全最重要。"},{"id":"n2_105_hatomokaku","l":"N2","g":"～はともかく","m":"……暂且不论","ej":"値段はともかく、品質には満足している。","ec":"价格暂且不论，质量我很满意。"},{"id":"n2_106_naratomokaku","l":"N2","g":"～ならともかく","m":"如果是……还另当别论","ej":"子どもならともかく、大人がそんなことをするのは恥ずかしい。","ec":"如果是孩子还另当别论，大人做那种事就很丢脸。"},{"id":"n2_107_okagede","l":"N2","g":"～おかげで","m":"多亏……","ej":"先生のおかげで、試験に合格できた。","ec":"多亏老师，我通过了考试。"},{"id":"n2_108_seide","l":"N2","g":"～せいで","m":"由于……；都怪……","ej":"寝不足のせいで、今日は集中できない。","ec":"因为睡眠不足，今天无法集中。"},{"id":"n2_109_seika","l":"N2","g":"～せいか","m":"也许是因为……","ej":"疲れているせいか、頭が痛い。","ec":"也许是因为累了，头很痛。"},{"id":"n2_110_tameni","l":"N2","g":"～ために","m":"因为……；为了……","ej":"事故のために、電車が遅れている。","ec":"因为事故，电车晚点了。"},{"id":"n2_111_dakeni","l":"N2","g":"～だけに","m":"正因为……所以……","ej":"期待していただけに、失敗したときのショックは大きかった。","ec":"正因为期待过，失败时受到的打击很大。"},{"id":"n2_112_dakeatsute","l":"N2","g":"～だけあって/～だけのことはある","m":"不愧是……；正因为……","ej":"有名な店だけあって、料理はとてもおいしい。","ec":"不愧是名店，菜非常好吃。"},{"id":"n2_113_bakarini","l":"N2","g":"～ばかりに","m":"只因为……导致坏结果","ej":"一言余計なことを言ったばかりに、友達を怒らせてしまった。","ec":"只因为多说了一句话，就惹朋友生气了。"},{"id":"n2_114_kotokara","l":"N2","g":"～ことから","m":"由……可知；因为……","ej":"空が暗くなってきたことから、雨が降ると予想された。","ec":"因为天空变暗了，推测要下雨。"},{"id":"n2_115_tokorokara","l":"N2","g":"～ところから","m":"从……方面来看；由……可知","ej":"彼の話し方のところから、緊張していることが分かった。","ec":"从他说话的样子可以知道他很紧张。"},{"id":"n2_116_kotodakara","l":"N2","g":"～ことだから","m":"因为是……所以想必……","ej":"まじめな彼のことだから、約束を忘れるはずがない。","ec":"因为是认真的他，想必不会忘记约定。"},{"id":"n2_117_monodakara","l":"N2","g":"～ものだから","m":"因为……；由于……","ej":"道が混んでいたものだから、遅れてしまった。","ec":"因为路上很堵，所以迟到了。"},{"id":"n2_118_mono","l":"N2","g":"～もの/～もん","m":"因为……嘛","ej":"だって、知らなかったんだもの。","ec":"因为我不知道嘛。"},{"id":"n2_119_nitsuki","l":"N2","g":"～につき","m":"由于……；每……","ej":"工事中につき、通行できません。","ec":"由于施工，禁止通行。"},{"id":"n2_120_ijou","l":"N2","g":"～以上","m":"既然……就……","ej":"引き受けた以上、最後まで責任を持つべきだ。","ec":"既然接受了，就应该负责到底。"},{"id":"n2_121_ueha","l":"N2","g":"～うえは","m":"既然……就……","ej":"約束したうえは、必ず守らなければならない。","ec":"既然约定了，就必须遵守。"},{"id":"n2_122_karaniha","l":"N2","g":"～からには/～からは","m":"既然……就……","ej":"参加するからには、全力を尽くしたい。","ec":"既然参加，就想尽全力。"},{"id":"n2_123_amari_nai","l":"N2","g":"あまり～ない/あまり～/あまりの～に/あまりの～で","m":"不太……；过于……以至于……","ej":"驚きのあまり、言葉が出なかった。","ec":"由于太惊讶，说不出话来。"},{"id":"n2_124_ageku","l":"N2","g":"～あげく","m":"经过……之后，结果……","ej":"長い議論のあげく、計画は中止になった。","ec":"经过长时间讨论后，计划最终被取消了。"},{"id":"n2_125_sue_ni","l":"N2","g":"～末（に）","m":"经过……之后，终于……","ej":"何度も話し合った末に、解決策が見つかった。","ec":"经过多次商量后，终于找到了办法。"},{"id":"n2_126_nioite","l":"N2","g":"～において/～における","m":"在……；于……","ej":"現代社会において、情報は非常に重要だ。","ec":"在现代社会中，信息非常重要。"},{"id":"n2_127_nikanshite","l":"N2","g":"～に関して/～に関する/～について","m":"关于……","ej":"この問題に関して、詳しく説明してください。","ec":"关于这个问题，请详细说明。"},{"id":"n2_128_nitaishite","l":"N2","g":"～に対して/～に対する","m":"对于……；与……相对","ej":"先生の質問に対して、学生は丁寧に答えた。","ec":"对于老师的问题，学生认真回答了。"},{"id":"n2_129_nikurabete","l":"N2","g":"～に比べて","m":"与……相比","ej":"去年に比べて、今年は雨が多い。","ec":"与去年相比，今年雨水多。"},{"id":"n2_130_nitotsute","l":"N2","g":"～にとって","m":"对……来说","ej":"私にとって、家族は一番大切だ。","ec":"对我来说，家人最重要。"},{"id":"n2_131_niyotsute","l":"N2","g":"～によって","m":"根据……；由于……；被……","ej":"結果は努力によって変わる。","ec":"结果会因努力而改变。"},{"id":"n2_132_niyotsuteha","l":"N2","g":"～によっては","m":"根据……有时……","ej":"人によっては、この薬で眠くなることがある。","ec":"根据人不同，有时会因为这种药而犯困。"},{"id":"n2_133_nimotozuite","l":"N2","g":"～に基づいて/～を基にして","m":"基于……","ej":"調査結果に基づいて、報告書を書いた。","ec":"基于调查结果写了报告。"},{"id":"n2_134_nomotode","l":"N2","g":"～の下で/～の下に","m":"在……之下","ej":"先生の指導の下で、研究を進めている。","ec":"在老师指导下推进研究。"},{"id":"n2_135_uede_2","l":"N2","g":"～うえで","m":"在……方面；在……上","ej":"安全のうえで、この方法には問題がある。","ec":"在安全方面，这种方法有问题。"},{"id":"n2_136_womegutsute","l":"N2","g":"～をめぐって/～をめぐる","m":"围绕……","ej":"新しい制度をめぐって、さまざまな意見が出ている。","ec":"围绕新制度，出现了各种意见。"},{"id":"n2_137_niwatatsute","l":"N2","g":"～にわたって","m":"历经……；涉及……","ej":"祭りは三日間にわたって行われた。","ec":"节日活动持续了三天。"},{"id":"n2_138_wotsuujite","l":"N2","g":"～を通じて/～を通して","m":"通过……；整个……期间","ej":"この活動を通じて、多くの人と知り合った。","ec":"通过这项活动认识了很多人。"},{"id":"n2_139_kara_nikakete","l":"N2","g":"～から～にかけて","m":"从……到……","ej":"夕方から夜にかけて、雨が強くなるでしょう。","ec":"从傍晚到夜里，雨势会增强吧。"},{"id":"n2_140_kawarini","l":"N2","g":"～かわりに/～にかわって","m":"代替……；作为交换……","ej":"今日は母にかわって、私が料理を作った。","ec":"今天我代替母亲做了饭。"},{"id":"n2_141_wohajime_toshite","l":"N2","g":"～をはじめ（として）","m":"以……为首","ej":"東京をはじめとして、多くの都市でイベントが開かれた。","ec":"以东京为首，许多城市举办了活动。"},{"id":"n2_142_toori","l":"N2","g":"～とおり","m":"按照……；正如……","ej":"先生が説明したとおりに、実験を行った。","ec":"按照老师说明的那样进行了实验。"},{"id":"n2_143_nioujite","l":"N2","g":"～に応じて","m":"根据……；响应……","ej":"経験に応じて、給料が決まる。","ec":"根据经验决定工资。"},{"id":"n2_144_nikotaete","l":"N2","g":"～にこたえて","m":"响应……；满足……","ej":"利用者の要望にこたえて、新しい機能を追加した。","ec":"响应用户需求，增加了新功能。"},{"id":"n2_145_nisotsute","l":"N2","g":"～に沿って","m":"沿着……；按照……","ej":"計画に沿って、作業を進めた。","ec":"按照计划推进了工作。"},{"id":"n2_146_nishitagatsute","l":"N2","g":"～に従って","m":"随着……；按照……","ej":"時代に従って、人々の考え方も変わる。","ec":"随着时代变化，人们的想法也会改变。"},{"id":"n2_147_nitsurete","l":"N2","g":"～につれて","m":"随着……","ej":"気温が上がるにつれて、花が咲き始めた。","ec":"随着气温上升，花开始开放。"},{"id":"n2_148_nitomonatsute","l":"N2","g":"～に伴って","m":"随着……；伴随……","ej":"人口の増加に伴って、交通問題が深刻になった。","ec":"随着人口增加，交通问题变得严重。"},{"id":"n2_149_totomoni","l":"N2","g":"～とともに","m":"和……一起；随着……；同时……","ej":"経済の発展とともに、生活も便利になった。","ec":"随着经济发展，生活也变方便了。"},{"id":"n2_150_nihanshite","l":"N2","g":"～に反して","m":"与……相反","ej":"予想に反して、試験は簡単だった。","ec":"与预想相反，考试很简单。"},{"id":"n2_151_nikuwaete","l":"N2","g":"～に加えて","m":"加上……；除此之外","ej":"雨に加えて、風も強くなってきた。","ec":"除了下雨，风也变强了。"},{"id":"n2_152_wotowazu","l":"N2","g":"～を問わず","m":"不问……；不论……","ej":"年齢を問わず、誰でも参加できる。","ec":"不论年龄，谁都可以参加。"},{"id":"n2_153_nikakawarazu","l":"N2","g":"～にかかわらず/～にもかかわらず","m":"不管……；尽管……","ej":"天候にかかわらず、試合は行われる。","ec":"不管天气如何，比赛都会举行。"},{"id":"n2_154_nukide","l":"N2","g":"～抜きで/～抜きにして","m":"省去……；没有……","ej":"冗談抜きで、これは大きな問題だ。","ec":"不开玩笑，这是个大问题。"},{"id":"n2_155_zaruwoenai","l":"N2","g":"～ざるを得ない","m":"不得不……","ej":"交通機関が止まったので、歩いて帰らざるを得なかった。","ec":"交通停运了，所以不得不走回去。"},{"id":"n2_156_kaneru","l":"N2","g":"～かねる","m":"难以……；不能……","ej":"その提案には賛成しかねます。","ec":"我难以赞成那个提案。"},{"id":"n2_157_kanenai","l":"N2","g":"～かねない","m":"有可能会……；恐怕会……","ej":"このままでは大きな事故になりかねない。","ec":"这样下去可能会酿成大事故。"},{"id":"n2_158_osoregaaru","l":"N2","g":"～恐れがある","m":"有……的危险；恐怕会……","ej":"台風の影響で、電車が遅れる恐れがある。","ec":"受台风影响，电车有可能晚点。"},{"id":"n2_159_youganai","l":"N2","g":"～ようがない","m":"没有办法……","ej":"証拠がなければ、説明しようがない。","ec":"没有证据的话，就无法说明。"},{"id":"n2_160_nimo_nai","l":"N2","g":"～にも～ない","m":"想……也不能……","ej":"忙しくて、休むにも休めない。","ec":"太忙了，想休息也休不了。"},{"id":"n2_161_hokanai","l":"N2","g":"～ほかない/～しかない","m":"只好……；只能……","ej":"誰も助けてくれないので、自分でやるほかない。","ec":"没人帮忙，只好自己做。"},{"id":"n2_162_eru","l":"N2","g":"～得る/～得ない","m":"可能……；不可能……","ej":"そのような問題は今後も起こり得る。","ec":"那样的问题今后也可能发生。"},{"id":"n2_163_kake","l":"N2","g":"～かけ/～かける","m":"做到一半；刚开始……","ej":"読みかけの本を机の上に置いた。","ec":"把读到一半的书放在桌上。"},{"id":"n2_164_kiru","l":"N2","g":"～きる","m":"完全……；……尽","ej":"彼は最後まで走りきった。","ec":"他跑到了最后。"},{"id":"n2_165_nuku","l":"N2","g":"～抜く","m":"坚持……到底","ej":"彼女は困難に負けず、研究をやり抜いた。","ec":"她没有输给困难，坚持完成了研究。"},{"id":"n2_166_gachi","l":"N2","g":"～がち","m":"容易……；往往……","ej":"忙しいと、食事を抜きがちだ。","ec":"忙的时候，容易不吃饭。"},{"id":"n2_167_garu","l":"N2","g":"～がる","m":"表现出……的样子","ej":"子どもは新しいおもちゃを欲しがっている。","ec":"孩子表现出想要新玩具的样子。"},{"id":"n2_168_gimi","l":"N2","g":"～気味","m":"有点……倾向","ej":"最近、少し疲れ気味だ。","ec":"最近有点疲劳。"},{"id":"n2_169_ge","l":"N2","g":"～げ","m":"看起来……","ej":"彼女は寂しげに窓の外を見ていた。","ec":"她看起来很寂寞地望着窗外。"},{"id":"n2_170_darake","l":"N2","g":"～だらけ","m":"满是……","ej":"子どもは泥だらけになって帰ってきた。","ec":"孩子满身泥地回来了。"},{"id":"n2_171_tsupoi","l":"N2","g":"～っぽい","m":"有……倾向；像……","ej":"この服は少し子どもっぽい。","ec":"这件衣服有点孩子气。"},{"id":"n2_172_muki","l":"N2","g":"～向き/～向け","m":"适合……；面向……","ej":"この本は初心者向けに書かれている。","ec":"这本书是面向初学者写的。"},{"id":"n2_173_tatoe_temo","l":"N2","g":"たとえ～ても/たとい～ても","m":"即使……也……","ej":"たとえ失敗しても、もう一度挑戦したい。","ec":"即使失败，也想再挑战一次。"},{"id":"n2_174_toshitemo","l":"N2","g":"～としても/～にしても/～にしろ/～にせよ","m":"即使……也……；作为……","ej":"明日雨だとしても、試合は行われる。","ec":"即使明天下雨，比赛也会举行。"},{"id":"n2_175_toshitara","l":"N2","g":"～としたら/～とすると/～とすれば","m":"如果……的话","ej":"もし海外で働くとしたら、どの国に行きたいですか。","ec":"如果在海外工作，你想去哪个国家？"},{"id":"n2_176_nisureba","l":"N2","g":"～にすれば/～にしたら/～にしてみれば","m":"从……立场来看","ej":"学生にすれば、試験は少ないほうがいい。","ec":"从学生的立场来看，考试少一点更好。"},{"id":"n2_177_youmononara","l":"N2","g":"～ようものなら","m":"如果一旦……就会有严重后果","ej":"そんなことを言おうものなら、彼はきっと怒るだろう。","ec":"要是说那种话，他一定会生气吧。"},{"id":"n2_178_tekaradenaito","l":"N2","g":"～てからでないと","m":"不……之后就不能……","ej":"詳しく調べてからでないと、結論は出せない。","ec":"不详细调查之后，就不能下结论。"},{"id":"n2_179_naikotoniha","l":"N2","g":"～ないことには","m":"如果不……就不能……","ej":"実際に見ないことには、判断できない。","ec":"不实际看一下，就无法判断。"},{"id":"n2_180_nashideha_nai","l":"N2","g":"～なしでは～ない/～なしには～ない/～なしに～ない","m":"没有……就不能……","ej":"水なしでは、人間は生きていけない。","ec":"没有水，人类无法生存。"},{"id":"n2_181_sae_ba","l":"N2","g":"～さえ～ば","m":"只要……就……","ej":"住所さえ分かれば、荷物を送ることができる。","ec":"只要知道地址，就能寄包裹。"},{"id":"n2_182_kagiri","l":"N2","g":"～限り","m":"只要……就……；在……范围内","ej":"時間が許す限り、手伝います。","ec":"只要时间允许，我就会帮忙。"},{"id":"n2_183_zutsu","l":"N2","g":"～ずつ","m":"每……；一点一点地","ej":"毎日少しずつ日本語を勉強している。","ec":"每天一点一点地学习日语。"},{"id":"n2_184_nante","l":"N2","g":"～なんて","m":"……之类的；竟然……","ej":"一人で海外へ行くなんて、すごい勇気だ。","ec":"一个人去海外，真是很有勇气。"},{"id":"n2_185_nanka","l":"N2","g":"～なんか","m":"……之类；像……这种","ej":"私なんかには、そんな大役は務まらない。","ec":"像我这样的人，担不起那样的重要职责。"},{"id":"n2_186_tsuke","l":"N2","g":"～っけ","m":"……来着；确认记忆","ej":"次の会議は何時からだっけ。","ec":"下次会议是几点开始来着？"},{"id":"n2_187_youdehanaika","l":"N2","g":"～ようではないか","m":"让我们……吧","ej":"みんなで力を合わせようではないか。","ec":"让我们大家齐心协力吧。"},{"id":"n2_188_o_go_ni_naru","l":"N2","g":"お/ご～になる","m":"尊敬语：您……","ej":"先生はもうお帰りになりました。","ec":"老师已经回去了。"},{"id":"n2_189_o_go_kudasai","l":"N2","g":"お/ご～ください","m":"尊敬请求：请您……","ej":"こちらで少々お待ちください。","ec":"请您在这里稍等。"},{"id":"n2_190_o_go_suru","l":"N2","g":"お/ご～する","m":"自谦语：我为您……","ej":"荷物をお持ちします。","ec":"我来为您拿行李。"},{"id":"n2_191_o_go_itasu","l":"N2","g":"お/ご～いたす","m":"更郑重的自谦语：我为您……","ej":"後ほどご連絡いたします。","ec":"稍后我会与您联系。"},{"id":"n2_192_o_go_itadaku","l":"N2","g":"お/ご～いただく","m":"承蒙您……；请您……","ej":"先生にご確認いただきました。","ec":"承蒙老师确认了。"},{"id":"n2_193_o_go_moushiageru","l":"N2","g":"お/ご～申し上げる","m":"郑重自谦：向您……","ej":"心よりお礼申し上げます。","ec":"我由衷向您表示感谢。"},{"id":"n2_194_saseteitadaku","l":"N2","g":"～させていただく","m":"请允许我……","ej":"本日は発表させていただきます。","ec":"今天请允许我进行发表。"},{"id":"n2_195_iratsushiyaru","l":"N2","g":"いらっしゃる/おいでになる/お越しになる","m":"尊敬语：来、去、在","ej":"社長は会議室にいらっしゃいます。","ec":"社长在会议室。"},{"id":"n2_196_mairu","l":"N2","g":"参る/伺う/あがる","m":"自谦语：去、来、拜访","ej":"明日、そちらへ伺います。","ec":"明天我去您那里拜访。"},{"id":"n2_197_otsushiyaru","l":"N2","g":"おっしゃる/申す/申し上げる","m":"尊敬/自谦：说","ej":"先生がおっしゃったことをメモした。","ec":"我记下了老师说的话。"},{"id":"n2_198_nasaru","l":"N2","g":"なさる/いたす","m":"尊敬/自谦：做","ej":"先生は毎朝散歩をなさいます。","ec":"老师每天早上散步。"},{"id":"n2_199_gozonjidesu","l":"N2","g":"ご存知です/存じている/存じ上げている","m":"知道的尊敬/自谦表达","ej":"その件については存じております。","ec":"关于那件事，我知道。"},{"id":"n2_200_meshiagaru","l":"N2","g":"召し上がる/いただく/頂戴する","m":"吃、喝的尊敬/自谦表达","ej":"どうぞ温かいうちに召し上がってください。","ec":"请趁热享用。"},{"id":"n2_201_goranninaru","l":"N2","g":"ご覧になる/拝見する","m":"看的尊敬/自谦表达","ej":"こちらの資料をご覧ください。","ec":"请看这份资料。"},{"id":"n2_202_kudasaru","l":"N2","g":"くださる/差し上げる","m":"给的尊敬/自谦表达","ej":"先生が本をくださいました。","ec":"老师给了我一本书。"},{"id":"n2_203_omenikakaru","l":"N2","g":"お目にかかる/お目にかける/ご覧に入れる","m":"见面的尊敬/自谦表达","ej":"いつか先生にお目にかかりたいです。","ec":"希望有一天能见到老师。"},{"id":"n2_204_uketamawaru","l":"N2","g":"承る","m":"听、接受、承办的自谦表达","ej":"ご用件を承ります。","ec":"我来听取您的需求。"},{"id":"n3_001_amari","l":"N3","g":"あまり","m":"过于……；因过度……而……","ej":"うれしさのあまり、彼は言葉が出なかった。","ec":"他因为太高兴，一时说不出话来。"},{"id":"n3_002_amari_ni","l":"N3","g":"あまりに","m":"非常；过于","ej":"あまりに静かなので、少し不安になった。","ec":"因为太安静了，我有点不安。"},{"id":"n3_003_ba_wave_hodo","l":"N3","g":"ば～ほど","m":"越……越……","ej":"日本語は勉強すればするほど面白くなる。","ec":"日语越学越有趣。"},{"id":"n3_004_ba_ii","l":"N3","g":"ばいい","m":"只要……就好；……就可以","ej":"分からなければ、先生に聞けばいい。","ec":"不懂的话，问老师就可以。"},{"id":"n3_005_bakari","l":"N3","g":"ばかり","m":"刚刚……；只……；总是……","ej":"弟はゲームばかりしている。","ec":"弟弟总是在玩游戏。"},{"id":"n3_006_bakari_da","l":"N3","g":"ばかりだ","m":"只会越来越……；一直朝某方向发展","ej":"最近、仕事は増えるばかりだ。","ec":"最近工作只会越来越多。"},{"id":"n3_007_bakari_denaku","l":"N3","g":"ばかりでなく","m":"不但……而且……","ej":"彼は英語ばかりでなく、中国語も話せる。","ec":"他不但会英语，还会中文。"},{"id":"n3_008_bakari_ni","l":"N3","g":"ばかりに","m":"正因为……才导致不好的结果","ej":"少し油断したばかりに、大きな失敗をした。","ec":"正因为稍微大意了一下，才犯了大错。"},{"id":"n3_009_ba_yokatta","l":"N3","g":"ばよかった","m":"要是……就好了；后悔没有……","ej":"もっと早く相談すればよかった。","ec":"早一点商量就好了。"},{"id":"n3_010_beki","l":"N3","g":"べき","m":"应该……；理应……","ej":"約束は守るべきだ。","ec":"约定是应该遵守的。"},{"id":"n3_011_beki_dewa_nai","l":"N3","g":"べきではない","m":"不应该……","ej":"人の失敗を笑うべきではない。","ec":"不应该嘲笑别人的失败。"},{"id":"n3_012_betsu_ni_wave_nai","l":"N3","g":"べつに～ない","m":"并不特别……；并没有……","ej":"別に怒っているわけではない。","ec":"我并不是在生气。"},{"id":"n3_013_chuu_or_juu","l":"N3","g":"中","m":"整个……期间；全……","ej":"夏休み中、毎日図書館へ行った。","ec":"整个暑假期间，我每天都去了图书馆。"},{"id":"n3_014_dake_2","l":"N3","g":"だけ","m":"尽可能……；足够到……程度","ej":"できるだけ早く返事をください。","ec":"请尽可能早些回复。"},{"id":"n3_015_darake","l":"N3","g":"だらけ","m":"满是……；净是……","ej":"雨の中を歩いたので、靴が泥だらけになった。","ec":"因为在雨中走路，鞋子沾满了泥。"},{"id":"n3_016_dokoro_ka","l":"N3","g":"どころか","m":"哪里是……；别说……反而……","ej":"休むどころか、昨日より忙しくなった。","ec":"别说休息了，反而比昨天更忙了。"},{"id":"n3_017_donna_ni_wave_temo","l":"N3","g":"どんなに～ても","m":"无论多么……也……","ej":"どんなに忙しくても、朝ご飯は食べる。","ec":"无论多忙，我都会吃早饭。"},{"id":"n3_018_furi_o_suru","l":"N3","g":"ふりをする","m":"装作……的样子","ej":"彼は聞こえないふりをした。","ec":"他装作没听见。"},{"id":"n3_019_gachi","l":"N3","g":"がち","m":"容易……；常常……（多为不好倾向）","ej":"忙しいと食事を抜きがちだ。","ec":"忙的时候容易不吃饭。"},{"id":"n3_020_gatai","l":"N3","g":"がたい","m":"难以……；无法轻易……","ej":"彼の親切は忘れがたい。","ec":"他的好意令人难以忘怀。"},{"id":"n3_021_gimi","l":"N3","g":"ぎみ","m":"稍微有点……倾向","ej":"最近、少し疲れ気味だ。","ec":"最近稍微有点疲惫。"},{"id":"n3_022_hodo","l":"N3","g":"ほど","m":"到……程度；越……越……","ej":"今日は歩けないほど疲れた。","ec":"今天累到走不动了。"},{"id":"n3_023_hodo_wave_nai","l":"N3","g":"ほど～ない","m":"没有比……更……；不如……","ej":"家ほど落ち着く場所はない。","ec":"没有比家更让人安心的地方。"},{"id":"n3_024_ikura_wave_temo","l":"N3","g":"いくら～ても","m":"无论怎么……也……","ej":"いくら説明しても、彼は分かってくれない。","ec":"无论怎么解释，他都不理解。"},{"id":"n3_025_ippou_da","l":"N3","g":"一方だ","m":"不断……；越来越……","ej":"この町の人口は減る一方だ。","ec":"这个城市的人口不断减少。"},{"id":"n3_026_ippou_de","l":"N3","g":"一方で","m":"一方面……另一方面……","ej":"この仕事は大変な一方で、やりがいもある。","ec":"这份工作一方面很辛苦，另一方面也有成就感。"},{"id":"n3_027_kake","l":"N3","g":"かけ","m":"做到一半；刚开始……","ej":"読みかけの本を机の上に置いた。","ec":"我把读到一半的书放在桌上。"},{"id":"n3_028_kara_iu_to_or_kara_ieba_or_kara_to_itte","l":"N3","g":"から言うと/から言えば/から言って","m":"从……来看；就……而言","ej":"値段から言うと、この店は少し高い。","ec":"从价格来看，这家店有点贵。"},{"id":"n3_029_kawari_ni","l":"N3","g":"代わりに","m":"代替……；作为交换；另一方面","ej":"今日は母の代わりに私が料理を作った。","ec":"今天我代替妈妈做了饭。"},{"id":"n3_030_kke","l":"N3","g":"っけ","m":"表示回忆或确认：……来着？","ej":"集合時間は何時だっけ。","ec":"集合时间是几点来着？"},{"id":"n3_031_kesshite_wave_nai","l":"N3","g":"決して～ない","m":"绝不……；决不……","ej":"この秘密は決して誰にも言わない。","ec":"这个秘密我绝不会告诉任何人。"},{"id":"n3_032_kiru","l":"N3","g":"切る","m":"完全……；彻底……","ej":"彼はマラソンを最後まで走り切った。","ec":"他把马拉松坚持跑完了。"},{"id":"n3_033_kirenai","l":"N3","g":"切れない","m":"不能完全……；……不完","ej":"こんなに多い料理は一人では食べ切れない。","ec":"这么多菜一个人吃不完。"},{"id":"n3_034_kiri","l":"N3","g":"きり","m":"自从……以后就一直；仅仅……","ej":"彼とは卒業して以来、一度会ったきりだ。","ec":"毕业以来，我只见过他一次。"},{"id":"n3_035_koso","l":"N3","g":"こそ","m":"正是……；才是……","ej":"努力してこそ、結果が出る。","ec":"正因为努力，才会有结果。"},{"id":"n3_036_koto","l":"N3","g":"こと","m":"表示命令、规则或注意事项：要……","ej":"試験中は携帯電話を使わないこと。","ec":"考试期间不得使用手机。"},{"id":"n3_037_koto_da","l":"N3","g":"ことだ","m":"最好……；应该……（建议）","ej":"体調が悪いなら、早く寝ることだ。","ec":"身体不舒服的话，最好早点睡。"},{"id":"n3_038_koto_ga_aru","l":"N3","g":"ことがある","m":"有时会……；曾经……","ej":"私は京都へ行ったことがある。","ec":"我去过京都。"},{"id":"n3_039_koto_ka","l":"N3","g":"ことか","m":"多么……啊；表示强烈感叹","ej":"合格の知らせを聞いて、どれほど安心したことか。","ec":"听到合格的消息时，我是多么安心啊。"},{"id":"n3_040_koto_kara","l":"N3","g":"ことから","m":"由于……；从……可以看出","ej":"声が震えていることから、彼が緊張していると分かった。","ec":"从声音在发抖可以知道他很紧张。"},{"id":"n3_041_koto_ni","l":"N3","g":"ことに","m":"令人……的是","ej":"驚いたことに、彼は一人で全部終わらせた。","ec":"令人吃惊的是，他一个人把全部做完了。"},{"id":"n3_042_koto_ni_naru","l":"N3","g":"ことになる","m":"决定……；结果变成……","ej":"来月から東京で働くことになった。","ec":"我决定从下个月开始在东京工作。"},{"id":"n3_043_koto_ni_suru","l":"N3","g":"ことにする","m":"决定……","ej":"毎朝六時に起きることにした。","ec":"我决定每天早上六点起床。"},{"id":"n3_044_koto_wa_nai","l":"N3","g":"ことはない","m":"不必……；没有必要……","ej":"そんなに心配することはない。","ec":"没有必要那么担心。"},{"id":"n3_045_kurai","l":"N3","g":"くらい","m":"大约；到……程度","ej":"泣きたいくらい悔しかった。","ec":"我懊悔到想哭的程度。"},{"id":"n3_046_kuse_ni","l":"N3","g":"くせに","m":"明明……却……（带责备）","ej":"彼は何も知らないくせに、偉そうに話す。","ec":"他明明什么都不知道，却说得很了不起。"},{"id":"n3_047_mama","l":"N3","g":"まま","m":"保持……状态","ej":"電気をつけたまま寝てしまった。","ec":"我开着灯就睡着了。"},{"id":"n3_048_maru_de","l":"N3","g":"まるで","m":"简直像……一样","ej":"彼女の声はまるで歌のようだ。","ec":"她的声音简直像歌声一样。"},{"id":"n3_049_metta_ni_wave_nai","l":"N3","g":"めったに～ない","m":"很少……；几乎不……","ej":"彼はめったに怒らない。","ec":"他很少生气。"},{"id":"n3_050_mono","l":"N3","g":"もの","m":"因为……嘛；用于说明理由","ej":"だって、知らなかったんだもの。","ec":"因为我不知道嘛。"},{"id":"n3_051_mono_da","l":"N3","g":"ものだ","m":"本来就是……；常常……；真想……","ej":"子どもはよく遊ぶものだ。","ec":"孩子本来就是爱玩的。"},{"id":"n3_052_moshikashitara","l":"N3","g":"もしかしたら","m":"说不定；也许","ej":"もしかしたら、彼はもう帰ったかもしれない。","ec":"说不定他已经回去了。"},{"id":"n3_053_muki","l":"N3","g":"向き","m":"适合……；面向……类型","ej":"この本は初心者向きだ。","ec":"这本书适合初学者。"},{"id":"n3_054_muke","l":"N3","g":"向け","m":"面向……；为……而做","ej":"これは子ども向けの番組だ。","ec":"这是面向儿童的节目。"},{"id":"n3_055_nagara_mo","l":"N3","g":"ながらも","m":"虽然……但是……","ej":"彼は若いながらも、経験が豊富だ。","ec":"他虽然年轻，但经验丰富。"},{"id":"n3_056_nai_koto_wa_nai","l":"N3","g":"ないことはない","m":"不是不……；并非不能……","ej":"食べられないことはないが、あまり好きではない。","ec":"不是不能吃，但不太喜欢。"},{"id":"n3_057_nanka_or_nante","l":"N3","g":"なんか / なんて","m":"……之类；竟然……；表示轻视或惊讶","ej":"私なんかまだまだ勉強不足です。","ec":"像我这样的人还远远学习不够。"},{"id":"n3_058_nazenara_or_naze_ka_to_iu_to","l":"N3","g":"なぜなら/なぜかというと","m":"因为……；原因是……","ej":"今日は早く帰る。なぜなら、用事があるからだ。","ec":"今天我要早点回去，因为有事。"},{"id":"n3_059_ndatte","l":"N3","g":"んだって","m":"听说……；据说……","ej":"山田さんは来月結婚するんだって。","ec":"听说山田下个月要结婚。"},{"id":"n3_060_ni_chigai_nai","l":"N3","g":"に違いない","m":"一定……；肯定……","ej":"あの人は医者に違いない。","ec":"那个人一定是医生。"},{"id":"n3_061_ni_kakete","l":"N3","g":"にかけて","m":"在……方面有能力；关于……很擅长","ej":"料理にかけては、母にかなう人はいない。","ec":"在做饭方面，没有人比得上母亲。"},{"id":"n3_062_ni_kansu_ru_or_ni_kanshite","l":"N3","g":"に関する / に関して","m":"关于……；有关……","ej":"環境問題に関してレポートを書いた。","ec":"我写了关于环境问题的报告。"},{"id":"n3_063_ni_kawatte","l":"N3","g":"にかわって","m":"代替……；取代……","ej":"父にかわって、私が会議に出た。","ec":"我代替父亲参加了会议。"},{"id":"n3_064_ni_kurabete","l":"N3","g":"に比べて","m":"与……相比","ej":"去年に比べて、今年は雨が多い。","ec":"与去年相比，今年雨水很多。"},{"id":"n3_065_ni_oite_or_ni_okeru","l":"N3","g":"において/ における","m":"在……；于……场合","ej":"現代社会において、情報はとても重要だ。","ec":"在现代社会中，信息非常重要。"},{"id":"n3_066_ni_shite_wa","l":"N3","g":"にしては","m":"作为……来说；就……而言却……","ej":"彼は初心者にしては、とても上手だ。","ec":"他作为初学者来说，非常熟练。"},{"id":"n3_067_ni_shite_mo","l":"N3","g":"にしても","m":"即使……也……；无论……","ej":"忙しいにしても、連絡ぐらいはできるはずだ。","ec":"即使再忙，至少也应该能联系一下。"},{"id":"n3_068_ni_taishite","l":"N3","g":"に対して","m":"对……；与……相对","ej":"先生は学生に対してとても親切だ。","ec":"老师对学生非常亲切。"},{"id":"n3_069_ni_totte","l":"N3","g":"にとって","m":"对……来说","ej":"私にとって、家族が一番大切だ。","ec":"对我来说，家人最重要。"},{"id":"n3_070_ni_tsuite","l":"N3","g":"について","m":"关于……","ej":"日本の文化について発表した。","ec":"我做了关于日本文化的发表。"},{"id":"n3_071_ni_tsure_or_ni_tsurete","l":"N3","g":"につれ/につれて","m":"随着……","ej":"年を取るにつれて、健康の大切さが分かる。","ec":"随着年龄增长，会明白健康的重要性。"},{"id":"n3_072_ni_yoru_to_or_ni_yoreba","l":"N3","g":"によると / によれば","m":"根据……；据……说","ej":"天気予報によると、明日は雨だそうだ。","ec":"据天气预报说明天会下雨。"},{"id":"n3_073_ni_yotte_or_ni_yoru","l":"N3","g":"によって / による","m":"由于……；根据……；由……","ej":"この結果は努力によって得られた。","ec":"这个结果是通过努力获得的。"},{"id":"n3_074_aida_ni_or_no_aida_ni","l":"N3","g":"間に/の間に","m":"在……期间；趁……时候","ej":"子どもが寝ている間に、部屋を片付けた。","ec":"趁孩子睡觉的时候，我收拾了房间。"},{"id":"n3_075_o_hajime","l":"N3","g":"をはじめ","m":"以……为首；以及……","ej":"東京をはじめ、多くの都市でイベントが行われた。","ec":"以东京为首，许多城市举办了活动。"},{"id":"n3_076_okage_de","l":"N3","g":"おかげで","m":"多亏……；幸亏……","ej":"先生のおかげで、試験に合格できた。","ec":"多亏老师，我通过了考试。"},{"id":"n3_077_ppanashi","l":"N3","g":"っぱなし","m":"一直……着不管；放任某状态","ej":"窓を開けっぱなしで出かけてしまった。","ec":"我开着窗就出门了。"},{"id":"n3_078_ppoi","l":"N3","g":"っぽい","m":"有……倾向；像……","ej":"この服は少し子どもっぽい。","ec":"这件衣服有点孩子气。"},{"id":"n3_079_sae","l":"N3","g":"さえ","m":"连……都……","ej":"忙しくて昼ご飯を食べる時間さえなかった。","ec":"忙得连吃午饭的时间都没有。"},{"id":"n3_080_sae_wave_ba","l":"N3","g":"さえ～ば","m":"只要……就……","ej":"名前さえ書けば、申し込みは終わりです。","ec":"只要写上名字，报名就完成了。"},{"id":"n3_081_saichuu_de_or_saichuu_ni","l":"N3","g":"最中で/最中に","m":"正在……的时候","ej":"会議の最中に電話が鳴った。","ec":"会议正在进行时电话响了。"},{"id":"n3_082_sei_de","l":"N3","g":"せいで","m":"因为……；都怪……（不好的原因）","ej":"寝不足のせいで、今日は集中できない。","ec":"因为睡眠不足，今天无法集中注意力。"},{"id":"n3_083_shidai","l":"N3","g":"次第","m":"一……就立刻……；取决于……","ej":"準備ができ次第、出発します。","ec":"准备好之后就立刻出发。"},{"id":"n3_084_shika_nai","l":"N3","g":"しかない","m":"只好……；只能……","ej":"電車が止まったので、歩いて帰るしかない。","ec":"电车停运了，只能走回去。"},{"id":"n3_085_sono_kekka","l":"N3","g":"その結果","m":"结果……","ej":"毎日練習した。その結果、大会で優勝できた。","ec":"每天练习。结果在比赛中获得了冠军。"},{"id":"n3_086_sou_mo_nai","l":"N3","g":"そうもない","m":"看起来不太可能……","ej":"この雨はしばらく止みそうもない。","ec":"这场雨看起来一时不会停。"},{"id":"n3_087_tabi_ni","l":"N3","g":"たびに","m":"每当……就……","ej":"この写真を見るたびに、旅行を思い出す。","ec":"每次看到这张照片，我就想起旅行。"},{"id":"n3_088_tame_ni_1","l":"N3","g":"ために","m":"为了……","ej":"留学するために、日本語を勉強している。","ec":"为了留学，我正在学习日语。"},{"id":"n3_089_tame_ni_2","l":"N3","g":"ために","m":"因为……；由于……","ej":"台風のために、試合は中止になった。","ec":"由于台风，比赛取消了。"},{"id":"n3_090_tara_ii_or_to_ii","l":"N3","g":"たらいい/といい","m":"……就好了；表示愿望或建议","ej":"明日晴れたらいいですね。","ec":"明天要是晴天就好了。"},{"id":"n3_091_tatoe_wave_temo","l":"N3","g":"たとえ～ても","m":"即使……也……","ej":"たとえ失敗しても、もう一度挑戦したい。","ec":"即使失败，我也想再挑战一次。"},{"id":"n3_092_ta_totan","l":"N3","g":"たとたん","m":"刚一……就……","ej":"ドアを開けたとたん、猫が飛び出した。","ec":"刚一开门，猫就跳了出来。"},{"id":"n3_093_te_goran","l":"N3","g":"てごらん","m":"试着……看看","ej":"分からなかったら、辞書で調べてごらん。","ec":"不懂的话，试着查查词典。"},{"id":"n3_094_te_hajimete","l":"N3","g":"てはじめて","m":"……之后才第一次……","ej":"一人暮らしをしてはじめて、親のありがたさが分かった。","ec":"独自生活之后，才第一次明白父母的可贵。"},{"id":"n3_095_temo_kamawanai","l":"N3","g":"てもかまわない","m":"即使……也没关系","ej":"少し遅れてもかまいません。","ec":"稍微迟一点也没关系。"},{"id":"n3_096_to_itte_mo","l":"N3","g":"といっても","m":"虽说……但是……","ej":"旅行といっても、近くの町へ行くだけだ。","ec":"虽说是旅行，也只是去附近的城市。"},{"id":"n3_097_to_iu","l":"N3","g":"という","m":"叫作……；所谓……","ej":"これは「おにぎり」という日本の食べ物です。","ec":"这是叫作“饭团”的日本食物。"},{"id":"n3_098_to_iu_koto_da","l":"N3","g":"ということだ","m":"据说……；也就是说……","ej":"ニュースによると、明日は雪が降るということだ。","ec":"据新闻说明天会下雪。"},{"id":"n3_099_to_iu_nowa","l":"N3","g":"というのは","m":"所谓……是指……","ej":"敬語というのは、相手を敬う表現のことだ。","ec":"所谓敬语，是指尊敬对方的表达。"},{"id":"n3_100_to_iu_to_or_to_ieba","l":"N3","g":"というと/といえば","m":"说到……；提起……","ej":"日本の春といえば、桜を思い出す。","ec":"说到日本的春天，就会想到樱花。"},{"id":"n3_101_to_iu_yori","l":"N3","g":"というより","m":"与其说……不如说……","ej":"彼は先生というより、研究者のようだ。","ec":"与其说他是老师，不如说像研究者。"},{"id":"n3_102_tokoro_de","l":"N3","g":"ところで","m":"话说回来；即使……也……","ej":"ところで、明日の予定は決まりましたか。","ec":"话说回来，明天的计划定了吗？"},{"id":"n3_103_tokoro_ga","l":"N3","g":"ところが","m":"可是；然而","ej":"早く出発した。ところが、電車が遅れてしまった。","ec":"我很早出发了，可是电车晚点了。"},{"id":"n3_104_toori","l":"N3","g":"とおり","m":"按照……；正如……","ej":"先生が言ったとおりに答えを書いた。","ec":"我按照老师说的写了答案。"},{"id":"n3_105_to_shitara_or_to_sureba","l":"N3","g":"としたら / とすれば","m":"如果……；假设……","ej":"もし留学するとしたら、日本へ行きたい。","ec":"如果要留学的话，我想去日本。"},{"id":"n3_106_to_shite","l":"N3","g":"として","m":"作为……","ej":"彼は代表として会議に参加した。","ec":"他作为代表参加了会议。"},{"id":"n3_107_towa_kagiranai","l":"N3","g":"とは限らない","m":"未必……；不一定……","ej":"高い物が必ずいいとは限らない。","ec":"贵的东西未必一定好。"},{"id":"n3_108_tsuide_ni","l":"N3","g":"ついでに","m":"顺便……","ej":"買い物に行くついでに、郵便局へ寄った。","ec":"去买东西时顺便去了邮局。"},{"id":"n3_109_tsumari","l":"N3","g":"つまり","m":"也就是说；总之","ej":"彼は来ない。つまり、私たちだけで始めるということだ。","ec":"他不来了。也就是说，我们自己开始。"},{"id":"n3_110_to_tomo_ni","l":"N3","g":"と共に","m":"和……一起；随着……同时……","ej":"経済の発展と共に、町の様子も変わった。","ec":"随着经济发展，城市的样子也变了。"},{"id":"n3_111_uchi_ni","l":"N3","g":"うちに","m":"趁……；在……期间","ej":"若いうちに、いろいろな経験をしたい。","ec":"趁年轻，我想经历各种事情。"},{"id":"n3_112_ue_de","l":"N3","g":"上で","m":"在……之后；在……方面","ej":"よく考えた上で、返事をします。","ec":"我会认真考虑之后再回复。"},{"id":"n3_113_wake_da","l":"N3","g":"わけだ","m":"难怪……；也就是说……","ej":"彼は毎日練習している。上手なわけだ。","ec":"他每天都练习，难怪很厉害。"},{"id":"n3_114_wake_dewa_nai","l":"N3","g":"わけではない","m":"并不是……","ej":"嫌いなわけではないが、今日は食べたくない。","ec":"并不是讨厌，只是今天不想吃。"},{"id":"n3_115_wake_ga_nai","l":"N3","g":"わけがない","m":"不可能……","ej":"こんな難しい問題がすぐ分かるわけがない。","ec":"这么难的问题不可能马上明白。"},{"id":"n3_116_wake_niwa_ikanai","l":"N3","g":"わけにはいかない","m":"不能……；不可以……","ej":"大事な会議なので、休むわけにはいかない。","ec":"因为是重要会议，不能请假。"},{"id":"n3_117_wari_ni","l":"N3","g":"わりに","m":"与……相比却……","ej":"この店は値段のわりにおいしい。","ec":"这家店相对于价格来说很好吃。"},{"id":"n3_118_you_na_ki_ga_suru","l":"N3","g":"ような気がする","m":"感觉好像……","ej":"今日は何かいいことが起こるような気がする。","ec":"我感觉今天好像会发生好事。"},{"id":"n3_119_you_ni","l":"N3","g":"ように","m":"为了……；像……一样","ej":"忘れないように、メモしておいた。","ec":"为了不忘记，我做了笔记。"},{"id":"n3_120_you_to_suru","l":"N3","g":"ようとする","m":"正要……；试图……","ej":"家を出ようとした時、電話が鳴った。","ec":"正要出门时，电话响了。"},{"id":"n3_121_you_to_shinai","l":"N3","g":"ようとしない","m":"不想……；没有要……的意思","ej":"彼は自分の間違いを認めようとしない。","ec":"他不想承认自己的错误。"},{"id":"n3_122_zuni","l":"N3","g":"ずに","m":"不……而……","ej":"朝ご飯を食べずに学校へ行った。","ec":"没吃早饭就去了学校。"},{"id":"n3_123_zu_niwa_irarenai","l":"N3","g":"ずにはいられない","m":"不能不……；忍不住……","ej":"その話を聞いて、笑わずにはいられなかった。","ec":"听了那件事，我忍不住笑了。"}];
+
+// ========== 模块 4.1：数据层 DataStore ==========
+var DataStore = {
+  all: GRAMMAR_DATA,
+
+  /** 返回指定等级的全部条目 */
+  getByLevel: function(level) {
+    return this.all.filter(function(item) { return item.l === level; });
+  },
+
+  /** 按 id 查找单条 */
+  getById: function(id) {
+    return this.all.find(function(item) { return item.id === id; });
+  },
+
+  /** 返回该等级条目总数 */
+  count: function(level) {
+    return this.all.filter(function(item) { return item.l === level; }).length;
+  }
+};
+
+// ========== 模块 4.2：进度持久化 ProgressStore ==========
+var STORAGE_KEY = 'sakura_gramma_progress';
+
+var ProgressStore = {
+  _data: {},
+
+  /** 从 localStorage 加载 */
+  load: function() {
+    try {
+      var raw = localStorage.getItem(STORAGE_KEY);
+      if (raw) this._data = JSON.parse(raw);
+    } catch(e) {
+      this._data = {};
+    }
+  },
+
+  /** 写入 localStorage */
+  save: function() {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(this._data));
+    } catch(e) {
+      console.warn('localStorage save failed:', e);
+    }
+  },
+
+  /** 返回某 id 的进度，无记录返回 null */
+  get: function(id) {
+    return this._data[id] || null;
+  },
+
+  /** 计算下次复习日期间隔（天） */
+  _getInterval: function(reviewCount) {
+    if (reviewCount === 0) return 1;
+    if (reviewCount === 1) return 3;
+    if (reviewCount === 2) return 7;
+    return 30;
+  },
+
+  /** 返回今天 YYYY-MM-DD */
+  _today: function() {
+    var d = new Date();
+    return d.getFullYear() + '-' +
+      String(d.getMonth() + 1).padStart(2, '0') + '-' +
+      String(d.getDate()).padStart(2, '0');
+  },
+
+  /** 给日期字符串加 n 天 */
+  _addDays: function(dateStr, n) {
+    var d = new Date(dateStr + 'T00:00:00');
+    d.setDate(d.getDate() + n);
+    return d.getFullYear() + '-' +
+      String(d.getMonth() + 1).padStart(2, '0') + '-' +
+      String(d.getDate()).padStart(2, '0');
+  },
+
+  /** 标记"记住"：进阶间隔 */
+  markRemembered: function(id) {
+    var existing = this._data[id];
+    var newCount = (existing ? existing.rc : 0) + 1;
+    var interval = this._getInterval(newCount);
+    this._data[id] = {
+      rc: newCount,
+      rd: this._addDays(this._today(), interval),
+      ls: this._today()
+    };
+  },
+
+  /** 标记"不熟"：重置为明天 */
+  markForgotten: function(id) {
+    this._data[id] = {
+      rc: 0,
+      rd: this._addDays(this._today(), 1),
+      ls: this._today()
+    };
+  }
+};
+
+// ========== 模块 4.3：抽取引擎 Picker ==========
+var Picker = {
+  /**
+   * 按优先级抽取 count 条语法
+   * @param {string} level - 'N2' | 'N3'
+   * @param {number} count - 抽取数量
+   * @returns {Array} 条目数组
+   */
+  pick: function(level, count) {
+    var pool = DataStore.getByLevel(level).slice();
+    if (pool.length === 0) return [];
+
+    var today = ProgressStore._today();
+    var selected = [];
+    var remaining = pool.slice();
+
+    // --- P1: 到期需复习 (review_date <= today) ---
+    var p1 = remaining.filter(function(item) {
+      var p = ProgressStore.get(item.id);
+      return p && p.rd && p.rd <= today;
+    });
+    // 按 review_date 升序（越早到期越靠前）
+    p1.sort(function(a, b) {
+      var da = ProgressStore.get(a.id).rd;
+      var db = ProgressStore.get(b.id).rd;
+      return da.localeCompare(db);
+    });
+    p1.forEach(function(item) {
+      if (selected.length >= count) return;
+      selected.push(item);
+      var idx = remaining.findIndex(function(r) { return r.id === item.id; });
+      if (idx >= 0) remaining.splice(idx, 1);
+    });
+
+    // --- P2: 从未见过 (无 localStorage 记录) ---
+    if (selected.length < count) {
+      var p2 = remaining.filter(function(item) { return !ProgressStore.get(item); });
+      this._shuffle(p2);
+      p2.forEach(function(item) {
+        if (selected.length >= count) return;
+        selected.push(item);
+        var idx = remaining.findIndex(function(r) { return r.id === item.id; });
+        if (idx >= 0) remaining.splice(idx, 1);
+      });
+    }
+
+    // --- P3: 随机旧条目补足 ---
+    if (selected.length < count) {
+      this._shuffle(remaining);
+      remaining.forEach(function(item) {
+        if (selected.length >= count) return;
+        selected.push(item);
+      });
+    }
+
+    // 最终打乱顺序
+    this._shuffle(selected);
+    return selected;
+  },
+
+  /** Fisher-Yates 洗牌 */
+  _shuffle: function(arr) {
+    for (var i = arr.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var tmp = arr[i];
+      arr[i] = arr[j];
+      arr[j] = tmp;
+    }
+  }
+};
+
+// ========== 模块 4.4：会话状态 Session ==========
+var Session = {
+  level: 'N2',
+  count: 5,
+  queue: [],
+  index: 0,
+  isFlipped: false,
+  stats: { remembered: 0, forgotten: 0 },
+
+  /** 初始化新的一轮 */
+  init: function(level, count) {
+    this.level = level;
+    this.count = count;
+    this.queue = Picker.pick(level, count);
+    this.index = 0;
+    this.isFlipped = false;
+    this.stats = { remembered: 0, forgotten: 0 };
+  },
+
+  /** 当前显示的卡片 */
+  currentCard: function() {
+    if (this.index >= this.queue.length) return null;
+    return this.queue[this.index];
+  },
+
+  /** 还有下一张？ */
+  hasMore: function() {
+    return this.index < this.queue.length - 1;
+  },
+
+  /** 翻到下一张 */
+  advance: function() {
+    this.index += 1;
+    this.isFlipped = false;
+    return this.currentCard();
+  },
+
+  /** 进度信息 */
+  progress: function() {
+    return {
+      current: Math.min(this.index + 1, this.queue.length),
+      total: this.queue.length
+    };
+  },
+
+  /** 本轮是否完成 */
+  isFinished: function() {
+    return this.queue.length === 0 || this.index >= this.queue.length;
+  }
+};
+
+// ========== 模块 4.5：UI 渲染 Renderer ==========
+var Renderer = {
+  els: {},
+
+  /** 初始化 DOM 引用 */
+  _initRefs: function() {
+    this.els = {
+      levelSelect:    document.getElementById('levelSelect'),
+      countSelect:    document.getElementById('countSelect'),
+      progressText:   document.getElementById('progressText'),
+      progressBar:    document.getElementById('progressBar'),
+      progressArea:   document.getElementById('progressArea'),
+      cardScene:      document.getElementById('cardScene'),
+      cardInner:      document.getElementById('cardInner'),
+      cardFront:      document.getElementById('cardFront'),
+      cardBack:       document.getElementById('cardBack'),
+      grammarText:    document.getElementById('grammarText'),
+      levelBadge:     document.getElementById('levelBadge'),
+      levelBadgeBack: document.getElementById('levelBadgeBack'),
+      meaningText:    document.getElementById('meaningText'),
+      exampleJp:      document.getElementById('exampleJp'),
+      exampleCn:      document.getElementById('exampleCn'),
+      btnArea:        document.getElementById('btnArea'),
+      cardStage:      document.getElementById('cardStage'),
+      finishedScreen: document.getElementById('finishedScreen'),
+      finishStats:    document.getElementById('finishStats'),
+      emptyState:     document.getElementById('emptyState'),
+    };
+  },
+
+  /** 渲染卡片正面 */
+  showCard: function(card) {
+    var level = card.l;
+    var levelLower = level.toLowerCase();
+
+    // 正面
+    this.els.grammarText.textContent = card.g;
+    this.els.levelBadge.textContent = level;
+    this.els.levelBadge.className = 'level-badge ' + levelLower;
+
+    // 背面
+    this.els.meaningText.textContent = card.m;
+    this.els.exampleJp.textContent = card.ej;
+    this.els.exampleCn.textContent = card.ec;
+    this.els.levelBadgeBack.textContent = level;
+    this.els.levelBadgeBack.className = 'level-badge-back ' + levelLower;
+
+    // 恢复正面朝上
+    this.els.cardInner.classList.remove('flipped');
+    // 重置背面滚动位置
+    this.els.cardBack.scrollTop = 0;
+
+    // 隐藏按钮
+    this.els.btnArea.classList.remove('active');
+
+    // 显示卡片区，隐藏完成画面和空状态
+    this.els.cardStage.style.display = '';
+    this.els.cardScene.style.display = '';
+    this.els.finishedScreen.classList.remove('show');
+    this.els.emptyState.classList.remove('show');
+  },
+
+  /** 翻转卡片到背面 */
+  flipCard: function() {
+    this.els.cardInner.classList.add('flipped');
+    this.els.btnArea.classList.add('active');
+  },
+
+  /** 更新进度条 */
+  updateProgress: function(current, total) {
+    if (total === 0) {
+      this.els.progressText.textContent = '无卡片';
+      this.els.progressBar.style.width = '0%';
+      return;
+    }
+    this.els.progressText.textContent = '第 ' + current + ' / ' + total + ' 张';
+    this.els.progressBar.style.width = ((current / total) * 100) + '%';
+  },
+
+  /** 显示完成画面 */
+  showFinished: function(stats) {
+    this.els.cardScene.style.display = 'none';
+    this.els.cardStage.style.display = '';
+    this.els.finishedScreen.classList.add('show');
+    this.els.btnArea.classList.remove('active');
+    this.els.progressText.textContent = '完成';
+    this.els.progressBar.style.width = '100%';
+
+    this.els.finishStats.innerHTML =
+      '记住 <span class="remembered-count">' + stats.remembered + '</span> 条' +
+      ' · ' +
+      '不熟 <span class="forgotten-count">' + stats.forgotten + '</span> 条';
+  },
+
+  /** 显示空状态 */
+  showEmpty: function() {
+    this.els.cardScene.style.display = 'none';
+    this.els.finishedScreen.classList.remove('show');
+    this.els.emptyState.classList.add('show');
+    this.els.btnArea.classList.remove('active');
+    this.els.progressText.textContent = '';
+    this.els.progressBar.style.width = '0%';
+  },
+
+  /** 同步下拉框 */
+  syncSelects: function(level, count) {
+    this.els.levelSelect.value = level;
+    this.els.countSelect.value = String(count);
+  }
+};
+
+// ========== 模块 4.6：控制器 Controller ==========
+var Controller = {
+  /** 初始化 */
+  init: function() {
+    Renderer._initRefs();
+    ProgressStore.load();
+
+    var level = 'N2';
+    var count = 5;
+
+    Session.init(level, count);
+    Renderer.syncSelects(level, count);
+
+    this._renderCurrentCard();
+    this._bindEvents();
+  },
+
+  /** 渲染当前卡片或完成/空状态 */
+  _renderCurrentCard: function() {
+    if (Session.queue.length === 0) {
+      Renderer.showEmpty();
+      return;
+    }
+
+    if (Session.isFinished()) {
+      Renderer.showFinished(Session.stats);
+      return;
+    }
+
+    var card = Session.currentCard();
+    if (!card) {
+      Renderer.showEmpty();
+      return;
+    }
+
+    Renderer.showCard(card);
+    Renderer.updateProgress(Session.progress().current, Session.progress().total);
+  },
+
+  /** 绑定事件 */
+  _bindEvents: function() {
+    var self = this;
+
+    // 等级切换
+    Renderer.els.levelSelect.addEventListener('change', function() {
+      var level = Renderer.els.levelSelect.value;
+      var count = parseInt(Renderer.els.countSelect.value);
+      Session.init(level, count);
+      Renderer.syncSelects(level, count);
+      self._renderCurrentCard();
+    });
+
+    // 数量切换
+    Renderer.els.countSelect.addEventListener('change', function() {
+      var level = Renderer.els.levelSelect.value;
+      var count = parseInt(Renderer.els.countSelect.value);
+      Session.init(level, count);
+      Renderer.syncSelects(level, count);
+      self._renderCurrentCard();
+    });
+
+    // 点击卡片 → 翻转
+    Renderer.els.cardInner.addEventListener('click', function(e) {
+      if (e.target.closest && e.target.closest('.btn')) return;
+      if (Session.isFlipped) return;
+      if (Session.isFinished()) return;
+      Session.isFlipped = true;
+      Renderer.flipCard();
+    });
+
+    // 点击「记住」
+    document.getElementById('btnRemember').addEventListener('click', function() {
+      if (!Session.isFlipped) return;
+      var card = Session.currentCard();
+      if (!card) return;
+      ProgressStore.markRemembered(card.id);
+      ProgressStore.save();
+      Session.stats.remembered += 1;
+      self._goNext();
+    });
+
+    // 点击「不熟」
+    document.getElementById('btnForgotten').addEventListener('click', function() {
+      if (!Session.isFlipped) return;
+      var card = Session.currentCard();
+      if (!card) return;
+      ProgressStore.markForgotten(card.id);
+      ProgressStore.save();
+      Session.stats.forgotten += 1;
+      self._goNext();
+    });
+
+    // 点击「再来一组」
+    document.getElementById('btnRestart').addEventListener('click', function() {
+      var level = Renderer.els.levelSelect.value;
+      var count = parseInt(Renderer.els.countSelect.value);
+      Session.init(level, count);
+      self._renderCurrentCard();
+    });
+  },
+
+  /** 翻到下一张 */
+  _goNext: function() {
+    if (Session.hasMore()) {
+      Session.advance();
+      this._renderCurrentCard();
+    } else {
+      // 最后一张操作完毕 → 完成
+      Renderer.showFinished(Session.stats);
+    }
+  }
+};
+
+// ========== 启动 ==========
+document.addEventListener('DOMContentLoaded', function() {
+  Controller.init();
+});
+</script>
+
+</body>
+</html>
